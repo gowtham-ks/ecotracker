@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoTracker | Personal Carbon Footprint</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container fade-in">
+    <h1>🌍 EcoTracker</h1>
+    <p>Track your daily energy, travel, and waste to estimate your carbon footprint.</p>
+
+    <form action="/report" method="post">
+      <h3>Energy Usage (per month)</h3>
+      <input type="number" step="any" name="electricity" placeholder="Electricity (kWh)">
+      <input type="number" step="any" name="gas" placeholder="Natural Gas (kWh)">
+
+      <h3>Transport (per month)</h3>
+      <input type="number" step="any" name="car" placeholder="Car (km)">
+      <input type="number" step="any" name="bus" placeholder="Bus (km)">
+      <input type="number" step="any" name="train" placeholder="Train (km)">
+      <input type="number" step="any" name="flight" placeholder="Flights (km)">
+
+      <h3>Waste (per month)</h3>
+      <input type="number" step="any" name="waste_landfill" placeholder="Landfill Waste (kg)">
+      <input type="number" step="any" name="waste_recycle" placeholder="Recycled Waste (kg)">
+
+      <button type="submit" class="btn">Generate Report</button>
+    </form>
+  </div>
+</body>
+</html>
